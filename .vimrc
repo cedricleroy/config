@@ -50,3 +50,6 @@ noremap <Right> <NOP>
 
 " relaive line number
 set relativenumber
+
+" key binding for nerdtree
+map <C-n> :NERDTreeToggle<CR>
