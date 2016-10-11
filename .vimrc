@@ -53,3 +53,6 @@ set relativenumber
 
 " key binding for nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" key binding for another way to escape insert mode
+inoremap jj <ESC>
