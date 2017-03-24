@@ -11,3 +11,5 @@ git: version control
 	yaourt git
 tmux: terminal multiplexer
 	yaourt tmux
+virtualenv
+    yaourt virtualenv
