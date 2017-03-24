@@ -1,5 +1,7 @@
 ﻿vim: text editor
 	yaourt vim
+pathogen: manage vim plugins
+	see github repo
 zsh: unix shell
 	yaourt zsh
 oh-my-zsh: zsh plugins
