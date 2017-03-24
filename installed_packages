@@ -1,0 +1,11 @@
+﻿vim: text editor
+	yaourt vim
+zsh: unix shell
+	yaourt zsh
+oh-my-zsh: zsh plugins
+	see github repo
+	.zshrc from github perso, manual section
+git: version control
+	yaourt git
+tmux: terminal multiplexer
+	yaourt tmux
