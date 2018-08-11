@@ -47,7 +47,7 @@ Plugin 'flazz/vim-colorschemes'  " cp colors/* ~/.vim/colors
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 " Set a color scheme
 colorscheme molokai
@@ -57,16 +57,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Set an airline theme
 let g:airline_theme='molokai'
-
-" Syntastic recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
 
 " ctrlp custom file listing for git projects
 let g:ctrlp_user_command = {
