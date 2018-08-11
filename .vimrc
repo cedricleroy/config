@@ -48,6 +48,16 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'mileszs/ack.vim'
+
+" uses ack with ag (the Silver Searcher)
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" jedi: do not display docstrings
+autocmd FileType python setlocal completeopt-=preview
 
 " Set a color scheme
 colorscheme molokai
