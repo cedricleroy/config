@@ -40,7 +40,7 @@ inoremap jj <ESC>
 " key binding for repeat
 nmap <TAB> .
 
-" Plugins
+" Plugins -> :PluginInstall
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'  " cp colors/* ~/.vim/colors
@@ -50,6 +50,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'junegunn/fzf'  " needs fzf to be installed
+Plugin 'junegunn/fzf.vim'
 
 " uses ack with ag (the Silver Searcher)
 if executable('ag')
@@ -78,6 +80,10 @@ let g:ctrlp_user_command = {
 
 " key binding for nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" key binding for fzf
+map <leader>f :Files<CR>
+map <leader>q :GFiles<CR>
 
 " Vundle stop
 call vundle#end()
