@@ -3,11 +3,11 @@ echo "Starting tmux custom session"
 
 SESSION="dev"  # name of the tmux session
 # Path we want our panes to go to:
-P_PATH="Documents/MyPrettyProject/"
+P_PATH="."
 # name of the virtual environment
 VENV="venv"
 
-tmux new-session -s ${SESSION} -n vim -d
+tmux new-session -s ${SESSION} -n shell -d
 tmux send-keys -t ${SESSION}:0 "cd $P_PATH" C-m
 tmux send-keys -t ${SESSION}:0 "source $VENV/bin/activate" C-m
 tmux send-keys -t ${SESSION}:0 'clear' C-m
@@ -20,5 +20,13 @@ tmux select-pane -t 0
 tmux send-keys -t ${SESSION}:0 'git status' C-m
 # let's display the last 10 git activities
 tmux send-keys -t ${SESSION}:0 'git reflog | head -n 10' C-m
+
+tmux new-window -t ${SESSION}:1 -n editor
+tmux send-keys -t ${SESSION}:1 "cd $P_PATH" C-m
+tmux send-keys -t ${SESSION}:1 "source $VENV/bin/activate" C-m
+tmux send-keys -t ${SESSION}:1 'clear' C-m
+tmux send-keys -t ${SESSION}:1 'vim' C-m
+
+tmux select-window -t $SESSION:0
 
 tmux attach -t ${SESSION}
