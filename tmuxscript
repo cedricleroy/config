@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Starting tmux custom session"
 
-SESSION="dev"  # name of the tmux session
+SESSION=${PWD##*/}  # name of the tmux session
 # Path we want our panes to go to:
 P_PATH="."
 # name of the virtual environment
@@ -26,6 +26,12 @@ tmux send-keys -t ${SESSION}:1 "cd $P_PATH" C-m
 tmux send-keys -t ${SESSION}:1 "source $VENV/bin/activate" C-m
 tmux send-keys -t ${SESSION}:1 'clear' C-m
 tmux send-keys -t ${SESSION}:1 'vim' C-m
+
+tmux new-window -t ${SESSION}:2 -n gitdiff
+tmux send-keys -t ${SESSION}:2 "cd $P_PATH" C-m
+tmux send-keys -t ${SESSION}:2 "source $VENV/bin/activate" C-m
+tmux send-keys -t ${SESSION}:2 'clear' C-m
+tmux send-keys -t ${SESSION}:2 'git difftool --tool vimdiff --no-prompt' C-m
 
 tmux select-window -t $SESSION:0
 
