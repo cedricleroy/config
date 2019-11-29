@@ -44,14 +44,15 @@ nmap <TAB> .
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'  " cp colors/* ~/.vim/colors
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'w0rp/ale'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'w0rp/ale'  " Asynchronous Lint Engine
+Plugin 'valloric/youcompleteme'  " needs to run python3 install.py in ~/.vim/bundle/YouCompleteMe
 Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/fzf'  " needs fzf to be installed
 Plugin 'junegunn/fzf.vim'
+Plugin 'airblade/vim-gitgutter'
 
 " uses ack with ag (the Silver Searcher)
 if executable('ag')
