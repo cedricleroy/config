@@ -71,14 +71,6 @@ let g:airline#extensions#tabline#enabled = 1
 " Set an airline theme
 let g:airline_theme='molokai'
 
-" ctrlp custom file listing for git projects
-let g:ctrlp_user_command = {
-    \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files --cached --exclude-standard --others'],
-    \ },
-    \ 'fallback': 'find %s -type f'
-\ }
-
 " key binding for nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
