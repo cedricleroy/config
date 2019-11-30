@@ -58,7 +58,7 @@ Plugin 'flazz/vim-colorschemes'  " cp colors/* ~/.vim/colors
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'  " Asynchronous Lint Engine
-Plugin 'valloric/youcompleteme'  " needs to run python3 install.py in ~/.vim/bundle/YouCompleteMe
+Plugin 'valloric/youcompleteme'  " needs to run python3 install.py --rust-completer --ts-completer in ~/.vim/bundle/YouCompleteMe
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/fzf'  " needs fzf to be installed
@@ -67,6 +67,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'janko/vim-test'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'jiangmiao/auto-pairs'
 
 " uses ack with ag (the Silver Searcher)
 if executable('ag')
