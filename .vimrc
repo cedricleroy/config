@@ -6,6 +6,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" deactivate errorbells (e.g. sound on escape)
+set belloff=all
+
 " show line number
 set number
 
@@ -22,6 +25,12 @@ set shiftwidth=4
 let python_highlight_all = 1
 
 set encoding=utf-8
+
+" brew tap homebrew/cask-fonts
+" brew cask install brew cask install font-fira-code
+" (needs to be set in iTerm2 to run properly, with
+" Hack Nerd Font to have icons in Nerd-Tree)
+set guifont=Fira:h12
 
 set background=dark
 
@@ -43,6 +52,8 @@ nmap <TAB> .
 " Plugins -> :PluginInstall
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'flazz/vim-colorschemes'  " cp colors/* ~/.vim/colors
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -53,6 +64,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/fzf'  " needs fzf to be installed
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-surround'
+Plugin 'janko/vim-test'
+Plugin 'scrooloose/nerdcommenter'
 
 " uses ack with ag (the Silver Searcher)
 if executable('ag')
@@ -74,9 +88,14 @@ let g:airline_theme='molokai'
 " key binding for nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+" show hidden files by default
+let NERDTreeShowHidden=1
+
 " key binding for fzf
 map <leader>f :Files<CR>
 map <leader>q :GFiles<CR>
+
+map <C-c> <plug>NERDCommenterToggle
 
 " Vundle stop
 call vundle#end()
