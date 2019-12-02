@@ -92,6 +92,12 @@ map <C-n> :NERDTreeToggle<CR>
 " show hidden files by default
 let NERDTreeShowHidden=1
 
+" key binding for YouCompleteMe
+map <leader>gt :YcmCompleter GetType<CR>
+map <leader>gd :YcmCompleter GetDoc<CR>
+map <leader>gti :YcmCompleter GoToImplementation<CR>
+map <leader>gtr :YcmCompleter GoToReferences<CR>
+
 " key binding for fzf
 map <leader>f :Files<CR>
 map <leader>q :GFiles<CR>
