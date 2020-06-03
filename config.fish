@@ -7,5 +7,10 @@
 
 # Vim key binding
 fish_vi_key_bindings
+
 # https://starship.rs/
 starship init fish | source
+
+# direnv:
+eval (direnv hook fish)
+
